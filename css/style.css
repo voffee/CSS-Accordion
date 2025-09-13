@@ -1,0 +1,82 @@
+
+/* Root Variables */
+:root {
+    /* Ribbon */
+    --ribbon-color:#ED2939;
+
+    /* Generic Black Color (FONT) */
+    --dark-text-color: #36454F;
+
+    /* Page Background Color */
+    --page-background-color: #F0F0F0;
+
+    /* Accordion Linear Gradient Colors */
+    --accordion-color-1: #EF6FB1;
+    --accordion-color-2: #F96E7D;
+    --accordion-color-3: #E97E4F;
+}
+
+/* Global Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Utility Classes */
+.font-raleway-generic-small {
+    font-family: 'Raleway', sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 16px;
+}
+
+.font-raleway-generic-large {
+    font-family: 'Raleway', sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 42px;
+}
+
+/* General Styling */
+body {
+
+}
+
+.ribbon {
+    height: 35px;
+    width: 100%;
+    background-color: var(--ribbon-color);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    padding: 0px 10px 0px 10px;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+h1 {
+    margin-bottom: 40px;
+}
+
+.accordion-panel {
+    background-image: linear-gradient(90deg, var(--accordion-color-1), var(--accordion-color-2), var(--accordion-color-3));
+}
+
+.accordion-content {
+    display: grid;
+    grid-template-rows: 0fr;
+}
+
+.accordion-content p {
+    overflow: hidden;
+}
