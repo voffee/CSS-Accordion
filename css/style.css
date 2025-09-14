@@ -70,13 +70,60 @@ h1 {
 
 .accordion-panel {
     background-image: linear-gradient(90deg, var(--accordion-color-1), var(--accordion-color-2), var(--accordion-color-3));
+    border-radius: 5px;
+    box-shadow: inset 0px 0px 1px 2px white;
+
+    & .accordion-panel-content {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        margin-right: 20px;
+
+        & .expand-icon {
+            /* Need to know this by heart, how to make icons with borders */
+            display: inline-block;
+            height: 0px;
+            width: 0px;
+            border-top: 8px solid var(--dark-text-color);
+            border-left: 5px solid transparent;
+            border-right: 5px solid transparent;
+            /* Kinda forgot transition & transform combinations */
+            transition: transform 0.7s;
+            transform: rotate(180deg);
+        }
+    }
+}
+
+.accordion-panel:nth-child(1) {
+    border-top: 2.5px solid black;
+    border-right: 2.5px solid black;
+    border-bottom: 2.5px solid black;
+    border-left: 2.5px solid black;
 }
 
 .accordion-content {
     display: grid;
     grid-template-rows: 0fr;
+
+    & > div {
+        /* overflow: hidden; */
+    }
+
+    & p {
+        padding-right: 5px;
+        padding-left: 5px;
+    }
+
+    & p:nth-child(3) {
+        margin-bottom: 5px;
+    }
 }
 
-.accordion-content > div {
-    overflow: hidden;
+#panel1-title, #panel2-title {
+    margin-top: 5px;
+    margin-right: 5px;
+    margin-bottom: 5px;
+    margin-left: 5px;
+    text-decoration: underline;
 }
