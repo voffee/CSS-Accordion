@@ -107,7 +107,7 @@ h1 {
     grid-template-rows: 0fr;
 
     & > div {
-        /* overflow: hidden; */
+        overflow: hidden;
     }
 
     & p {
@@ -126,4 +126,10 @@ h1 {
     margin-bottom: 5px;
     margin-left: 5px;
     text-decoration: underline;
+}
+
+/* Switching Class */
+
+.is-closed {
+    grid-template-rows: 1fr;
 }
