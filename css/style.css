@@ -42,7 +42,7 @@
 
 /* General Styling */
 body {
-
+    background-color: var(--page-background-color);
 }
 
 .ribbon {
